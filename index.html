@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>CALCULADORA CASIO - JULIO GARCIA</title>
+    <style>
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    .Casio{
+        width: 650px;
+        max-width: 90%;
+        margin: 2.5rem auto;
+        border-radius: 1rem;
+        background: #5f737b;
+        padding: 2rem;
+        user-select: none;  
+    }
+
+    .Casio_model{
+        color: #fff;    
+    }
+
+    .Casio_window{
+        background: #7ea480;
+        padding: 1.5rem 2.5rem;
+        border-radius: .5rem;
+        margin: 30px 0;
+        border: solid 5px #000;
+    }
+
+    .Casio_window > span{
+        font-size: 1.75rem;
+        display: block;
+    }
+
+    .Casio_window_operation{
+        letter-spacing: 2.5px;    
+    }
+
+    .Casio_window_result{
+        text-align: end;
+        margin-top: 10px;
+    }
+
+    .Casio_keys_numbers{
+        display: grid;
+        row-gap: 15px;
+        column-gap: 20px;
+        grid-template-columns: repeat(5,1fr);
+    }
+
+    .Casio_keys_numbers span{
+        color: #fff;
+        border: solid 1px #000;
+        font-size: 1.5rem;
+        padding: .5rem 0;
+        border-radius: 5px;
+        cursor: pointer;
+        text-align: center;
+        background: #cccccc90;
+    }
+
+    .Casio_keys_numbers .red{background: red;}
+    .Casio_keys_numbers span:hover{opacity: .7;}
+
+    </style>
+</head>
+<body>
+
+<main class="Casio">
+    <div class="Casio_model">
+        <h2>CASIO</h2>
+        <h4>fx-82MS</h4>   
+    </div>
+    <div class="Casio_window">
+        <span id="casioOperation" class="Casio_window_operation"></span>
+        <span id="casioResult" class="Casio_window_result"></span>    
+    </div>
+    <div class="Casio_keys">
+        <div>
+    
+        </div>
+        <div id="casioButtons" class="Casio_keys_numbers">
+            <span class="casioButton">7</span>
+            <span class="casioButton">8</span>
+            <span class="casioButton">9</span>
+            <span class="casioButton red" id="buttonDel">DEL</span>
+            <span class="casioButton red" id="buttonOff">OFF</span>
+            <span class="casioButton">4</span>
+            <span class="casioButton">5</span>
+            <span class="casioButton">6</span>
+            <span class="casioButton" id="casioMult">*</span>
+            <span class="casioButton" id="casioDivi">/</span>
+            <span class="casioButton">1</span>  
+            <span class="casioButton">2</span>  
+            <span class="casioButton">3</span>  
+            <span class="casioButton" id="buttonAdd">+</span>  
+            <span class="casioButton" id="buttonSustr">-</span>  
+            <span class="casioButton" id="buttonReset">AC</span>             
+            <span class="casioButton">0</span>    
+            <span class="casioButton">.</span>  
+            <span class="">ANS</span>  
+            <span class="casioButton" id="buttonResult">=</span>   
+        </div>    
+    </div>
+</main>
+
+<script type="text/javascript" src="./src/main.js"></script>
+</body>
+</html>
